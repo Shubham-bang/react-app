@@ -24,10 +24,6 @@ function App() {
          if (!values.email) {
            errors.email = 'Please senter the email address';
          }
-         console.log(values.gender);
-         if(!values.gender){
-          errors.gender = "Please select gender";
-        }
          
          return errors;
        }}
@@ -70,8 +66,6 @@ function App() {
 
            <input type="radio" value="MALE" name="gender"/> Male
            <input type="radio" value="FEMALE" name="gender"/> Female
-
-           <p style={{color: "red"}}>{errors.gender && touched.gender && errors.gender}</p>
            
            
            <button type="submit" disabled={isSubmitting}>
